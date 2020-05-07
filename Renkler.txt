@@ -1,0 +1,4 @@
+Gainsboro	#DCDCDC (Grimsi)
+DarkCyan	#008B8B (Mavimsi)
+
+Yazı rengi    #333333
