@@ -96,26 +96,18 @@ header .for_border{
     height: 45%;
 }
 
-
-footer{
-    float: left;
-    margin-top: 5%;
-    border: solid 1px #204E5F;
-    border-radius: 10%;
-    background-color: #79A7A8;
+.ben{
+    padding: 15px;
+    position: relative;
+    margin: auto;
+    width: 55%;
+    margin-top: 30px;
+    border: 1px solid #FF8984;
 }
 
-footer .social_media i{
-    color: #204E5F;
+.ben p{
+    font-weight: 600;
 }
-
-footer table tr td{
-    background-color: #79A7A8;
-    text-align: center;
-    color: #204E5F;
-}
-
-
 
 @media only screen and (min-width: 992px){
 

@@ -1,0 +1,47 @@
+h2, p, a{
+    font-family: 'Times New Roman', Times, serif;
+    color: #204E5F;
+    text-decoration: none;
+}
+
+.tanitimlar{
+    padding: 20px;
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    width: 70%;
+    height: 1150px;
+    border: #FF8984 1px solid;
+}
+
+.container{
+    margin-top: 30px;
+}
+
+.kutucuk_sol{
+    float: left;
+    width: 55%;
+    height: 250px;
+    margin-top: 5px;
+}
+
+.kutucuk_sag{
+    float: right;
+    width: 55%;
+    height: 250px;
+    margin-top: 5px;
+}
+
+
+@media only screen and (max-width: 767px){
+    .tanitimlar{
+        margin: 0px;
+        margin-top: 30px;
+        width: auto;
+        height: 1080px;
+    }
+    .kutucuk_sag, .kutucuk_sol{
+        width: 300px;
+        height: 250px;
+    }
+}

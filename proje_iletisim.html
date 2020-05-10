@@ -10,13 +10,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yusuf Sönmez</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yusuf Sönmez</title>
 
-<link rel="stylesheet" href="CSS/stil.css">
-<link rel="stylesheet" href="CSS/proje_hakkinda.css">
-<script src="https://kit.fontawesome.com/d400023c88.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/proje_iletisim.css">
+    <link rel="stylesheet" href="CSS/stil.css">
+
+    <script src="proje_iletisim.js"></script>
+    <script src="https://kit.fontawesome.com/d400023c88.js" crossorigin="anonymous"></script>
 
 </html>
 
@@ -45,10 +47,10 @@
                         <a class="nav-link" href="proje_sehrim.html">Şehrim</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Mirasımız</a>
+                        <a class="nav-link" href="proje_mirasimiz.html">Mirasımız</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="">İletişim</a>
+                        <a class="nav-link" href="proje_iletisim.html">İletişim</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="proje_login.html">Login</a>
@@ -62,30 +64,57 @@
         
     </header>
 
-    <div class="yazi">
-        <h1>Merhaba,</h1>
-        <a href="https://www.tripadvisor.com.tr/Attraction_Review-g609054-d12688896-Reviews-Golcuk_Tabiat_Parki-Bolu_Bolu_Province_Turkish_Black_Sea_Coast.html"><img id = "resim_1" src="images/IMG_5759.JPG" alt="" ></a>
-        <p>
-             Öncelikle  sayfama Hoşgeldiniz. Ben Yusuf Sönmez. Sakarya Üniversitesi Bilgisayar Mühendisliği bölümü öğrencisiyim.
-            2000 yılında Elazığ'da dünyaya geldim. Ancak doğduğum yerde değil, babamın memleketi olan Sakarya'da büyüdüm.
-            Kendimi Elazığ'dan çok Sakarya'ya ait hissediyorum diyebilirim.
-            
-        </p>
-        <p>
-            En çok keyif aldığım aktivite kitap okumak. Kitap okumanın zaman yolculuğunu az da olsa mümkün hale getirdiğini
-            düşünüyorum. Çünkü eski devirlerde yaşamasak da yaşamış olanların yazdıklarıyla o dönemi anlamlandırabiliyoruz.
-        </p>
+    <div class="iletisim">
 
-        <p>
-            Kamp yapmak ve seyahat etmek de ayrıca keyif aldığım aktiviteler arasında. Doğayla iç içe vakit geçirmek şehrin
-            yoğun atmosferinden kaçamak yapmamı sağlıyor. Seyahat etmenin en sevdiğim kısımları ise yeni insanlarla tanışıyor,
-            ve yeni yerler keşfediyor olmak. Tabi bunları yanımda arkadaşlarımla yapıyorsam ayrı bir keyif almıyor değilim.
-            <a href="https://www.kulturportali.gov.tr/turkiye/sakarya/gezilecekyer/cigdem-yaylasi">
-                <img id = "resim_2" src="images/IMG-0278.JPG" alt="" title="Gittiğim ilk kamp">
-            </a>
-        </p>
+        <form action="iletisim.php" method="POST" onsubmit="return isValid(this)">
         
+            <div class="info">
+
+                <label for="isim">İsim</label> <br>
+                <input type="text" id="isim" name="isim"> <br>
+                <label for="soyisim">Soyisim</label> <br>
+                <input type="text" id="soyisim" name="soyisim"> <br>
+                <label for="email">E-Mail</label> <br>
+                <input type="text" name="email" id="email"> <br>
+                <label for="sehir">Şehir</label> <br>
+                <input list="sehirler" name="sehirler">
+                <datalist id="sehirler">
+                    <option value="Sakarya">
+                    <option value="Ankara">
+                    <option value="İstanbul">
+                    <option value="İzmir">
+                    <option value="Elazığ">
+                    <option value="Muş">
+                </datalist>
+
+            </div>
+            <br>
+            <div class="hobiler">
+                <label for="hobi">Hobiler</label> <br>
+                <input type="checkbox" name="hobi[]" value="Yüzmek">Yüzmek <br>
+                <input type="checkbox" name="hobi[]" value="Kitap okumak">Kitap okumak <br>
+                <input type="checkbox" name="hobi[]" value="Yemek yapmak">Yemek yapmak <br>
+                <input type="checkbox" name="hobi[]" value="Seyahat etmek">Seyahat etmek <br>
+                <input type="checkbox" name="hobi[]" value="Kampa gitmek">Kampa gitmek <br>
+            </div>
+            <div class="cinsiyet">
+                <label for="cinsiyet">Cinsiyet</label> <br>
+                <input type="radio" name="cinsiyet" id="erkek" value="Erkek">Erkek
+                <input type="radio" name="cinsiyet" id="kadin" value="Kadın">Kadın
+            </div>
+            <br>
+            <div class="mesaj">
+                <label for="mesaj">Mesaj</label> <br>
+                <textarea name="ileti" id="mesaj" cols="50" rows="10"></textarea> <br>
+                <input type="submit" value="Gönder">
+                <input type="reset" value="Temizle">
+            </div>
+            
+        
+        </form>
+
     </div>
+
     <footer>
         <table>
             <tr>

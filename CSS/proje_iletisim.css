@@ -1,0 +1,75 @@
+label{
+    font-family: 'Georgia', Times, serif;
+}
+
+.iletisim{
+    width: 80%;
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+}
+.info{
+    padding: 15px;
+    width: 50%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+.hobiler{
+    padding: 15px;
+    height: 200px;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.cinsiyet{
+    padding: 15px;
+    height: 200px;
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+.mesaj{
+    text-align: center;
+    padding: 15px;
+    width: 50%;
+    position: relative;
+    margin: auto;
+    margin-top: 190px;
+}
+.info input, input[type="submit"], input[type="reset"]{
+    width: 150px;
+    padding: 5px;
+    position: relative;
+    margin: auto;
+    border: solid 1px #FF8984;
+    border-radius: 20px;
+    background-color: #79A7A8;
+    color: #233255;
+    transition: 0.25s;
+    text-align: center;
+    outline: none;
+}
+
+.info input:focus{
+    width: 200px;
+}
+input[type="submit"], input[type="reset"]{
+    width: 90px;
+}
+textarea{
+    border: 1px #233255 solid;
+    padding: 20px;
+    border-radius: 50px;
+    max-width: 400px;
+    width: 100%;
+    outline: none;
+}
+
+@media only screen and (max-width: 767px){
+
+    .mesaj{
+        width: 330px;
+    }
+   
+}
